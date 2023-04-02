@@ -17,9 +17,22 @@ type Box struct {
 	value [][]Digit
 }
 
+func NewBox() *Box {
+
+	value := [][]Digit{
+		{{}, {}, {}},
+		{{}, {}, {}},
+		{{}, {}, {}},
+	}
+
+	return &Box{
+		value: value,
+	}
+}
+
 /*
 *
-TODO: Write unite tests for all GetRow and Col methods
+TODO: Write unit tests for all GetRow and Col methods
 */
 func (b *Box) GetRow(rowIndex int) []Digit {
 	return b.value[rowIndex]
